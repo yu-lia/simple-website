@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/images/favicon.ico">
+        <link rel="stylesheet" href="/css/styles.css">
+        
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{> header}}
+            <h2 class="large">{{ subtitle }}</h2>
+            <p>Check the weather anywhere</p>
+            <form action="">
+                <input type="text" placeholder="Location, location, location">
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+    
+    {{> footer}}
+
+    <script src="/js/weather.js"></script>
+    </body>
+</html>
