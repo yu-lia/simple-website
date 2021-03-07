@@ -5,6 +5,8 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+///configure ports for the public deployment
+const port = process.env.PORT || 3000; //equals forst value if it exists, second if not
 
 const publicDirPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -87,6 +89,6 @@ app.get('*', (req, res) => {
      });
 });
 
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
+app.listen(port, () => {
+    console.log("Server started on port " + port);
 });
